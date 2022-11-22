@@ -19,9 +19,9 @@ defmodule Mix.Tasks.People.InsertData do
   ]
 
   def run(_argv) do
-    otp_app = Application.get_env(:av_user_sync, :otp_app)
-    repo = Application.get_env(:av_user_sync, :repo)
-    schema = Application.get_env(:av_user_sync, :schema)
+    otp_app = Application.get_env(:people_feeder, :otp_app)
+    repo = Application.get_env(:people_feeder, :repo)
+    schema = Application.get_env(:people_feeder, :schema)
 
     Application.ensure_all_started(otp_app)
 
